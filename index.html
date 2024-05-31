@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abbas Portfolio</title> 
+    <link rel="stylesheet" href="./src/custom-styles.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="font-roboto">
+    <!-- header section -->
+    <header>
+      <nav
+        id="nav"
+        class="px-4 flex-col justify-start relative transition-all duration-500 sm:static items-start py-4 bg-dark100 text-light100 sm:h-min flex sm:justify-between sm:items-center sm:flex-row font-josefin-sans"
+      >
+        <div
+          class="logo cursor-pointer flex items-center w-full justify-between sm:w-1/3"
+        >
+          <img src="./src/images/logo.png" class="w-12" alt="asg creations logo" />
+          <span id="toggle" onclick="handletoggle()" class="sm:hidden">
+            <i class="fa fa-solid fa-bars"> </i>
+          </span>
+        </div>
+        <!-- nav items -->
+        <ul
+          id="navItem"
+          class="flex flex-col my-4 gap-4 left-[-200px] absolute top-16 sm:static justify-center sm:w-1/3 sm:flex-row sm:my-0"
+        >
+          <li class="hover:text-white transition-all duration-500">
+            <a href="#home">Home</a>
+          </li>
+          <li class="hover:text-white transition-all duration-500">
+            <a href="#about">About</a>
+          </li>
+          <li class="hover:text-white transition-all duration-500">
+            <a href="#skills">Skills</a>
+          </li>
+          <li class="hover:text-white transition-all duration-500">
+            <a href="#services">Services</a>
+          </li>
+          <li class="hover:text-white transition-all duration-500">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <!-- nav search and toggle btn -->
+        <div
+          id="navSearch"
+          class="flex gap-2 justify-center items-center search absolute top-72 left-[-200px] sm:w-1/3 sm:static"
+        >
+          <input
+            type="text"
+            placeholder="Search"
+            class="px-2 outline-none border-none bg-dark200 py-1 rounded-md"
+          />
+
+          <div id="themeToggle" class="switch hidden sm:flex">
+            <input type="checkbox" id="check" />
+            <label for="check" id="check-btn"></label>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main section -->
+
+    <main>
+      <section
+        id="home"
+        class="flex flex-col sm:flex-row bg-dark100 sm:min-h-screen px-4 sm:px-16 text-white"
+      >
+        <div class="content py-16 xs:py-32 sm:my-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-6xl xl:text-7xl">
+            I'M
+            <span
+              class="text-3xl xs:text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-glow font-roboto-slab"
+              >Abbas Gawali</span
+            >
+          </h1>
+          <h2
+            class="text-2xl xs:text-3xl md:text-4xl xl:text-5xl font-josefin-sans py-4 md:py-8"
+          >
+            A MERN Stack Web Developer
+          </h2>
+          <div class="icons flex gap-4 pb-4 md:pb-8">
+            <a
+              href="https://www.linkedin.com/in/abbasgawali/"
+              target="_blank"
+              class="fab fa-linkedin border-2 hover:shadow-glow cursor-pointer text-glow border-glow p-2 rounded-full"
+            ></a>
+            <a
+              href="https://www.github.com/AbbasGawali"
+              target="_blank"
+              class="fab fa-github border-2 hover:shadow-glow cursor-pointer text-glow border-glow p-2 rounded-full"
+            ></a>
+            <a
+              href="https://www.instagram.com/abbasgawali11/"
+              target="_blank"
+              class="fab fa-instagram border-2 hover:shadow-glow cursor-pointer text-glow border-glow p-2 rounded-full"
+            ></a>
+            <a
+              href="https://x.com/AbbasGawali111"
+              target="_blank"
+              class="fab fa-twitter border-2 hover:shadow-glow cursor-pointer text-glow border-glow p-2 rounded-full"
+            ></a>
+          </div>
+          <a href="mailto:abbasgawali111@gmail.com">
+            <button
+              class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-glow font-bold transition-all duration-500 text-glow hover:text-dark100 hover:bg-glow"
+            >
+              Download Resume
+            </button>
+          </a>
+        </div>
+        <div class="content-img m-auto relative">
+          <img
+            src="./src/images/animations/coding.gif"
+            style="width: 22rem"
+            class="w-10"
+            alt="coding"
+          />
+          <img
+            src="./src/images/animations/logo dark.png"
+            id="ani-logo"
+            class="absolute left-48 w-14"
+            alt="logo-dark"
+          />
+
+          <img
+            src="./src/images/animations/head.png"
+            id="ani-head"
+            class="absolute left-48 w-14"
+            alt="logo-dark"
+          />
+          <img
+            src="./src/images/animations/body.png"
+            id="ani-body"
+            class="absolute left-48 w-14"
+            alt="logo-dark"
+          />
+        </div>
+      </section>
+
+      <!-- about section  -->
+
+      <section
+        id="about"
+        class="flex flex-col-reverse gap-4 sm:flex-row bg-dark100 sm:min-h-screen px-4 sm:px-16 text-white"
+      >
+        <div class="content-img relative my-auto w-full sm:w-[50%]">
+          <img
+            src="./src/images/about.png"
+            style="width: 32rem"
+            class="w-10"
+            alt="about"
+            id="aboutimg"
+          />
+          <img
+            src="./src/images/about_up.png"
+            style="width: 32rem"
+            id="about-up"
+            class="w-10"
+            alt="about-up"
+          />
+        </div>
+
+        <div class="content py-16 xs:py-32 w-full sm:w-[60%] my-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            About
+            <span
+              class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-glow font-roboto-slab"
+              >Me</span
+            >
+          </h1>
+          <p
+            class="text-sm md:text-base lg:text-xl font-josefin-sans py-4 md:py-8"
+          >
+            Hello! I'm Abbas, a passionate MERN Stack Developer with a talent
+            for turning ideas into dynamic web applications. My journey in
+            coding began with a curiosity for the workings behind everyday
+            websites, quickly evolving into a dedication to developing sleek,
+            user-friendly, and efficient web solutions. As an enthusiastic
+            learner, I'm always exploring new technologies and trends to
+            incorporate into my projects. I thrive on challenges and push myself
+            to continuously grow and excel. My portfolio showcases my
+            problem-solving skills, attention to detail, and ability to deliver
+            robust applications, reflecting my commitment to collaboration and
+            creativity. Let's build something amazing together!
+          </p>
+          <a href="#contact">
+            <button
+              class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-glow font-bold transition-all duration-500 text-glow hover:text-dark100 hover:bg-glow"
+            >
+              Read More
+            </button>
+          </a>
+        </div>
+      </section>
+
+      <!-- skills section  -->
+
+      <section
+        id="skills"
+        class="gap-4 bg-dark100 sm:min-h-screen px-4 sm:px-16 text-white"
+      >
+        <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+          My
+          <span
+            class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-glow font-roboto-slab"
+            >Skills</span
+          >
+        </h1>
+        <div class="flex flex-col-reverse lg:flex-row">
+          <div class="content py-4 xs:py-4 w-full lg:w-[50%] my-auto">
+            <!-- technical skills with horizontal bar design  -->
+            <div class="technical-skills bg-dark200 p-6 my-14">
+              <div class="skill">
+                <div class="flex justify-between">
+                  <h1>Html</h1>
+                  <h1>90%</h1>
+                </div>
+                <div class="bar w-full h-2 xs:h-4 bg-dark100 my-2 relative">
+                  <div
+                    class="bar2 absolute top-0 left-0 w-[90%] h-2 xs:h-4 bg-glow"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="flex justify-between">
+                  <h1>Css</h1>
+                  <h1>83%</h1>
+                </div>
+                <div class="bar w-full h-2 xs:h-4 bg-dark100 my-2 relative">
+                  <div
+                    class="bar2 absolute top-0 left-0 w-[83%] h-2 xs:h-4 bg-glow"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="flex justify-between">
+                  <h1>Javascript</h1>
+                  <h1>81%</h1>
+                </div>
+                <div class="bar w-full h-2 xs:h-4 bg-dark100 my-2 relative">
+                  <div
+                    class="bar2 absolute top-0 left-0 w-[81%] h-2 xs:h-4 bg-glow"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="flex justify-between">
+                  <h1>React</h1>
+                  <h1>86%</h1>
+                </div>
+                <div class="bar w-full h-2 xs:h-4 bg-dark100 my-2 relative">
+                  <div
+                    class="bar2 absolute top-0 left-0 w-[86%] h-2 xs:h-4 bg-glow"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="flex justify-between">
+                  <h1>Node Js</h1>
+                  <h1>88%</h1>
+                </div>
+                <div class="bar w-full h-2 xs:h-4 bg-dark100 my-2 relative">
+                  <div
+                    class="bar2 absolute top-0 left-0 w-[88%] h-2 xs:h-4 bg-glow"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="flex justify-between">
+                  <h1>Java</h1>
+                  <h1>81%</h1>
+                </div>
+                <div class="bar w-full h-2 xs:h-4 bg-dark100 my-2 relative">
+                  <div
+                    class="bar2 absolute top-0 left-0 w-[81%] h-2 xs:h-4 bg-glow"
+                  ></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="flex justify-between">
+                  <h1>C++</h1>
+                  <h1>82%</h1>
+                </div>
+                <div class="bar w-full h-2 xs:h-4 bg-dark100 my-2 relative">
+                  <div
+                    class="bar2 absolute top-0 left-0 w-[82%] h-2 xs:h-4 bg-glow"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content py-4 xs:py-4 w-full lg:w-[50%] my-auto">
+            <div class="soft-skills m-4">
+              <!-- soft skills with circular progress bars -->
+              <div class="s-circle creativity">
+                <h2 class="s-number font-josefin-sans font-bold">
+                  83<span>%</span>
+                </h2>
+                <h3 class="">Creativity</h3>
+              </div>
+
+              <div class="s-circle teamwork">
+                <h2 class="s-number font-josefin-sans font-bold">
+                  89<span>%</span>
+                </h2>
+                <h3 class="">Teamwork</h3>
+              </div>
+            </div>
+            <div class="soft-skills m-4">
+              <div class="s-circle analytical">
+                <h2 class="s-number font-josefin-sans font-bold">
+                  85<span>%</span>
+                </h2>
+                <h3 class="">Analytical</h3>
+              </div>
+
+              <div class="s-circle speaking">
+                <h2 class="s-number font-josefin-sans font-bold">
+                  87<span>%</span>
+                </h2>
+                <h3 class="">Speaking</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- our services section  -->
+
+      <section
+        id="services"
+        class="flex flex-col gap-4 sm:flex-row bg-dark100 sm:min-h-screen px-4 sm:px-16 text-white"
+      >
+        <div class="content py-16 xs:py-32 w-full my-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            Our
+            <span
+              class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-glow font-roboto-slab"
+              >Services</span
+            >
+          </h1>
+          <div class="flex flex-wrap lg:flex-nowrap gap-6 my-12">
+            <article class="bg-dark200 hover:shadow-glow p-4">
+              <i class="fas fa-code text-2xl xs:text-5xl text-glow"></i>
+              <h2 class="text-2xl xs:text-4xl mt-4 font-josefin-sans">
+                Web Design
+              </h2>
+              <p class="my-4 text-justify">
+                I provide personalized web design services tailored to meet your
+                unique needs. With a keen eye for detail and a passion for
+                creativity, I create visually stunning and highly functional
+                websites that captivate visitors and drive results. Whether you
+                need a complete website overhaul or a fresh new design, I ensure
+                a seamless and user-friendly experience. My focus on responsive
+                design guarantees that your website looks great and performs
+                flawlessly on all devices. Trust me to bring your vision to life
+                with a professional and innovative web design solution.
+              </p>
+              <a
+                href="https://trainings.internshala.com/view_certificate/cfhn3q400et/6lh6nn4c5mc/"
+                target="_blank"
+              >
+                <button
+                  class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-glow font-bold transition-all duration-500 text-glow hover:text-dark100 hover:bg-glow"
+                >
+                  Read More
+                </button>
+              </a>
+            </article>
+            <article class="bg-dark200 hover:shadow-glow p-4">
+              <i class="fas fa-paint-brush text-2xl xs:text-5xl text-glow"></i>
+              <h2 class="text-2xl xs:text-4xl mt-4 font-josefin-sans">
+                Web Developement
+              </h2>
+              <p class="my-4 text-justify">
+                I offer tailored web development services to meet your specific
+                needs. With a strong focus on both functionality and aesthetics,
+                I create websites that are not only visually appealing but also
+                highly efficient and user-friendly. Whether you need a
+                custom-built website, feature enhancements, or backend
+                development, I ensure a seamless and responsive experience
+                across all devices. My goal is to bring your vision to life with
+                innovative and reliable web development solutions that drive
+                results and provide an exceptional user experience.
+              </p>
+              <a
+                href="https://trainings.internshala.com/view_certificate/cfhn3q400et/6lh6nn4c5mc/"
+                target="_blank"
+              >
+                <button
+                  class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-glow font-bold transition-all duration-500 text-glow hover:text-dark100 hover:bg-glow"
+                >
+                  Read More
+                </button>
+              </a>
+            </article>
+            <article class="bg-dark200 hover:shadow-glow p-4">
+              <i class="fas fa-database text-2xl xs:text-5xl text-glow"></i>
+              <h2 class="text-2xl xs:text-4xl mt-4 font-josefin-sans">
+                Database
+              </h2>
+              <p class="my-4 text-justify">
+                I offer personalized database services to meet your specific
+                requirements. With expertise in database design, management, and
+                optimization, I ensure your data is organized, secure, and
+                easily accessible. Whether you need database development, data
+                migration, or performance tuning, I provide tailored solutions
+                that enhance efficiency and support your business goals. My
+                focus is on delivering robust and scalable database systems that
+                provide reliable and high-performance data management, ensuring
+                your operations run smoothly and effectively.
+              </p>
+              <a
+                href="https://trainings.internshala.com/view_certificate/cfhn3q400et/6lh6nn4c5mc/"
+                target="_blank"
+              >
+                <button
+                  class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-glow font-bold transition-all duration-500 text-glow hover:text-dark100 hover:bg-glow"
+                >
+                  Read More
+                </button>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- latest projects section  -->
+
+      <section
+        id="projects"
+        class="flex flex-col gap-4 sm:flex-row bg-dark100 sm:min-h-screen px-4 sm:px-16 text-white"
+      >
+        <div class="content py-16 xs:py-32 w-full my-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            Latest
+            <span
+              class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-glow font-roboto-slab"
+              >Projects</span
+            >
+          </h1>
+          <div class="projects flex flex-wrap justify-center gap-6 my-10">
+            <article class="img-container">
+              <img
+                src="./src/images/projects/one.jpg"
+                style="width: 25rem"
+                class="art-img"
+                alt="about"
+              />
+              <div class="overlay overlay-left">
+                <div class="project-content">
+                  <h3
+                    class="text-dark100 text-center text-sm xs:text-xl font-roboto-slab"
+                  >
+                    Virtual Project
+                  </h3>
+                  <div class="flex justify-center">
+                    <button
+                      class="border-2 text-sm xs:text-xl py-0 px-2 xs:px-2 md:px-6 rounded-sm border-dark100 my-2 font-bold transition-all duration-500 hover:bg-dark100 text-dark100 hover:text-glow bg-glow"
+                    >
+                      Visit It
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="img-container">
+              <img
+                src="./src/images/projects/two.jpg"
+                style="width: 25rem"
+                class="art-img"
+                alt="about"
+              />
+              <div class="overlay overlay-left">
+                <div class="project-content">
+                  <h3
+                    class="text-dark100 text-center text-sm xs:text-xl font-roboto-slab"
+                  >
+                    Ai Model
+                  </h3>
+                  <div class="flex justify-center">
+                    <button
+                      class="border-2 text-sm xs:text-xl py-0 px-2 xs:px-2 md:px-6 rounded-sm border-dark100 my-2 font-bold transition-all duration-500 hover:bg-dark100 text-dark100 hover:text-glow bg-glow"
+                    >
+                      Visit It
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="img-container">
+              <img
+                src="./src/images/projects/three.jpg"
+                style="width: 25rem"
+                class="art-img"
+                alt="about"
+              />
+              <div class="overlay overlay-left">
+                <div class="project-content">
+                  <h3
+                    class="text-dark100 text-center text-sm xs:text-xl font-roboto-slab"
+                  >
+                    Web Scrapper
+                  </h3>
+                  <div class="flex justify-center">
+                    <button
+                      class="border-2 text-sm xs:text-xl py-0 px-2 xs:px-2 md:px-6 rounded-sm border-dark100 my-2 font-bold transition-all duration-500 hover:bg-dark100 text-dark100 hover:text-glow bg-glow"
+                    >
+                      Visit It
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="img-container">
+              <img
+                src="./src/images/projects/four.jpg"
+                style="width: 25rem"
+                class="art-img"
+                alt="about"
+              />
+              <div class="overlay overlay-left">
+                <div class="project-content">
+                  <h3
+                    class="text-dark100 text-center text-sm xs:text-xl font-roboto-slab"
+                  >
+                    Ecommerce Project
+                  </h3>
+                  <div class="flex justify-center">
+                    <button
+                      class="border-2 text-sm xs:text-xl py-0 px-2 xs:px-2 md:px-6 rounded-sm border-dark100 my-2 font-bold transition-all duration-500 hover:bg-dark100 text-dark100 hover:text-glow bg-glow"
+                    >
+                      Visit It
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="img-container">
+              <img
+                src="./src/images/projects/fieve.jpg"
+                style="width: 25rem"
+                class="art-img"
+                alt="about"
+              />
+              <div class="overlay overlay-left">
+                <div class="project-content">
+                  <h3
+                    class="text-dark100 text-center text-sm xs:text-xl font-roboto-slab"
+                  >
+                    Teams Project
+                  </h3>
+                  <div class="flex justify-center">
+                    <button
+                      class="border-2 text-sm xs:text-xl py-0 px-2 xs:px-2 md:px-6 rounded-sm border-dark100 my-2 font-bold transition-all duration-500 hover:bg-dark100 text-dark100 hover:text-glow bg-glow"
+                    >
+                      Visit It
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="img-container">
+              <img
+                src="./src/images/projects/six.jpg"
+                style="width: 25rem"
+                class="art-img"
+                alt="about"
+              />
+              <div class="overlay overlay-left">
+                <div class="project-content">
+                  <h3
+                    class="text-dark100 text-center text-sm xs:text-xl font-roboto-slab"
+                  >
+                    CC Project
+                  </h3>
+                  <div class="flex justify-center">
+                    <button
+                      class="border-2 text-sm xs:text-xl py-0 px-2 xs:px-2 md:px-6 rounded-sm border-dark100 my-2 font-bold transition-all duration-500 hover:bg-dark100 text-dark100 hover:text-glow bg-glow"
+                    >
+                      Visit It
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact section  -->
+
+      <section
+        id="contact"
+        class="flex flex-col gap-4 sm:flex-row bg-dark100 sm:min-h-screen px-4 sm:px-16 text-white"
+      >
+        <div class="content py-16 xs:py-32 w-full my-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+            Contact
+            <span
+              class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-glow font-roboto-slab"
+              >Me</span
+            >
+          </h1>
+          <form action="" class="my-8 flex flex-col sm:gap-2">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <input
+                type="text"
+                class="sm:w-[50%] py-2 px-4 sm:py-4 sm:px-6 bg-dark200 outline-none"
+                required
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                class="sm:w-[50%] py-2 px-4 sm:py-4 sm:px-6 bg-dark200 outline-none"
+                required
+                placeholder="Last Name"
+              />
+            </div>
+            <div class="flex flex-col gap-4 sm:gap-6 sm:flex-row py-4">
+              <input
+                type="email"
+                class="py-2 px-4 sm:py-4 sm:px-6 sm:w-[50%] bg-dark200 outline-none"
+                required
+                placeholder="Email"
+              />
+              <input
+                type="number"
+                class="py-2 px-4 sm:py-4 sm:px-6 sm:w-[50%] bg-dark200 outline-none"
+                required
+                placeholder="Mobile Number"
+              />
+            </div>
+            <textarea
+              name=""
+              rows="6"
+              class="py-2 px-4 sm:py-4 sm:px-6 w-[100%] bg-dark200 outline-none"
+              id=""
+            ></textarea>
+          </form>
+          <button
+            type="submit"
+            class="border-2 py-1 px-2 xs:py-1 xs:px-2 md:py-2 md:px-6 rounded-sm border-glow font-bold transition-all duration-500 text-glow hover:text-dark100 hover:bg-glow"
+          >
+            Send Message
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer section  -->
+    <footer
+      class="flex flex-col sm:flex-row px-4 py-6 bg-dark100 text-white justify-between"
+    >
+      <!-- portfolio footer info-->
+      <div class="info pb-4 sm:pb-0">
+        <a href="#home">
+          <img src="./src/images/logo.png" class="w-12" alt="asg creations logo" />
+          <h2 class="text-xl xs:text-2xl text-glow font-roboto-slab">
+            Abbas Gawali
+          </h2>
+        </a>
+        <p>ACreations &copy; All Rights Reserved - 2024</p>
+        <div class="flex gap-4 py-2">
+          <a
+            href="mailto:abbasgawali111@gmail.com"
+            class="fas fa-envelope border-2 hover:shadow-glow cursor-pointer text-white border-white p-2 rounded-full"
+          ></a>
+          <a
+            href="tel:+91 9359136333"
+            class="fas fa-phone border-2 hover:shadow-glow cursor-pointer text-white border-white p-2 rounded-full"
+          ></a>
+        </div>
+      </div>
+
+      <!-- portfolio links -->
+
+      <div class="portfoliolinks text-light100">
+        <h2 class="text-xl xs:text-2xl text-glow font-roboto-slab">
+          Portfolio Links
+        </h2>
+        <div class="flex flex-col md:flex-row gap-0 md:gap-28 lg:gap-36">
+          <div class="flex flex-col my-4 gap-4">
+            <li class="hover:text-white list-none transition-all duration-500">
+              <a href="#home">Home</a>
+            </li>
+            <li class="hover:text-white list-none transition-all duration-500">
+              <a href="#about">About</a>
+            </li>
+            <li class="hover:text-white list-none transition-all duration-500">
+              <a href="#skills">Skills</a>
+            </li>
+          </div>
+          <div class="flex flex-col my-4 gap-4">
+            <li class="hover:text-white list-none transition-all duration-500">
+              <a href="#services">Services</a>
+            </li>
+            <li class="hover:text-white list-none transition-all duration-500">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="hover:text-white list-none transition-all duration-500">
+              <a href="#contact">Contact</a>
+            </li>
+          </div>
+        </div>
+      </div>
+
+      <!-- social links -->
+      <div class="sociallinks">
+        <h2 class="text-xl xs:text-2xl text-glow font-roboto-slab">
+          Social Links
+        </h2>
+        <div class="flex gap-4 py-4">
+          <a
+            href="https://www.linkedin.com/in/abbasgawali/"
+            target="_blank"
+            class="fab fa-linkedin border-2 hover:shadow-glow cursor-pointer text-white border-white p-2 rounded-full"
+          ></a>
+          <a
+            href="https://www.github.com/AbbasGawali"
+            target="_blank"
+            class="fab fa-github border-2 hover:shadow-glow cursor-pointer text-white border-white p-2 rounded-full"
+          ></a>
+          <a
+            href="https://www.instagram.com/abbasgawali11/"
+            target="_blank"
+            class="fab fa-instagram border-2 hover:shadow-glow cursor-pointer text-white border-white p-2 rounded-full"
+          ></a>
+          <a
+            href="https://x.com/AbbasGawali111"
+            target="_blank"
+            class="fab fa-twitter border-2 hover:shadow-glow cursor-pointer text-white border-white p-2 rounded-full"
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- fontawesome icons Javascript file -->
+    <script
+      src="https://kit.fontawesome.com/fb9969f0bb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Navbar Javascript code -->
+    <script>
+      let toggle = true;
+      const handletoggle = () => {
+        if (toggle) {
+          document.getElementById(
+            "toggle"
+          ).innerHTML = `<i class="fas fa-times"></i>`;
+
+          toggle ? (toggle = !toggle) : (toggle = !toggle);
+          document.getElementById("nav").classList.add("h-80");
+          // document.getElementById("themeToggle").classList.add("flex");
+          document.getElementById("themeToggle").style.display = "flex";
+          document.getElementById("navItem").classList.remove("left-[-200px]");
+          document
+            .getElementById("navSearch")
+            .classList.remove("left-[-200px]");
+        } else {
+          document.getElementById(
+            "toggle"
+          ).innerHTML = `<i class="fa fa-solid fa-bars"> </i>`;
+          toggle ? (toggle = !toggle) : (toggle = !toggle);
+          document.getElementById("nav").classList.remove("h-80");
+          document.getElementById("themeToggle").style.display = "none";
+          document.getElementById("navItem").classList.add("left-[-200px]");
+          document.getElementById("navSearch").classList.add("left-[-200px]");
+        }
+      };
+    </script>
+  </body>
+</html>
